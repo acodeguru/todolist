@@ -5,7 +5,7 @@
   "dependencies": {
     "@babel/preset-env": "^7.12.1",
     "@babel/preset-react": "^7.12.1",
-    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "@types/node": "^12.0.0",
@@ -17,14 +17,15 @@
     "node-sass": "^4.14.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
     "typescript": "^4.0.3",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "npm run test && react-scripts start",
+    "start": "react-scripts start",
     "build": "npm run test && react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "prestart": "npm run build:tailwind && lessc src/styles/main.less src/styles/antd.scss --js",
@@ -61,11 +62,11 @@
     "autoprefixer": "^9.8.6",
     "babel-loader": "^8.1.0",
     "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.5",
     "postcss-cli": "^8.1.0",
     "react-is": "^17.0.1",
-    "ts-jest": "^26.4.1",
+    "@types/jest": "^24.9.1",
     "react-test-renderer": "^17.0.1",
-    "tailwindcss": "^1.9.6"
+    "tailwindcss": "^1.9.6",
+    "ts-jest": "^26.4.1"
   }
 }

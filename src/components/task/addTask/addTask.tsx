@@ -28,7 +28,7 @@ export default function AddNewTaskForm() {
             }}
             onFinish={onFinish}
         >
-            <Row gutter={24}>
+            <Row>
                 <Col xs={24} sm={24} md={24} lg={24} xl={8}>
                     <Form.Item
                         label="Task"
