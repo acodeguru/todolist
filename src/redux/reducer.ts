@@ -3,6 +3,8 @@
 const reducer = (state :any,  action:any) => {
     const { type , payload } = action;
     if(type==='AddNewTask'){
+
+        console.log("----------------")
         return {...state,tasks:[...state.tasks, {...payload}]} // In which we are using  speard operator to add new task. It returns an object to redux State.
     
     }
