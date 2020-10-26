@@ -33,6 +33,7 @@ function App() {
                 lg={{ span: 20 }}
                 xl={{ span: 18 }}
               >
+                
                 <PageHeader
                   title="Add Todo"
                   subTitle="To add a todo, just fill the form below and click in add todo."
@@ -60,9 +61,11 @@ function App() {
 
                 <Card title="Details of task list">
                   <Tabs defaultActiveKey="1" >
+                    
                     <TabPane tab="Pending Task List" key="1">
                       <PendingTask />
                     </TabPane>
+
                     <TabPane tab="Completed Task List" key="2">
                       <CompletedTask />
                     </TabPane>
