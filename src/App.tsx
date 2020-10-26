@@ -1,26 +1,79 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.scss';
+import React from 'react'
+import { Layout } from 'antd';
+import { Route, BrowserRouter as Router, Redirect } from 'react-router-dom';
+import { Row, Col, Card, PageHeader, Tabs } from 'antd';
+import 'antd/dist/antd.css';
+
+import './index.scss'
+import './styles/main.scss'
+import AddNewTaskForm from '../src/components/task/addTask/addTask'
+import PendingTask from '../src/components/task/pendingTask/pendingTask'
+import CompletedTask from '../src/components/task/completedTask/completedTask'
+
+const { Content } = Layout;
+const { TabPane } = Tabs;
+
 
 function App() {
+  let [collapsed, setCollapse] = React.useState(false)
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+            <Row
+              justify="center"
+              align="middle"
+              gutter={[0, 20]}
+              className="todos-container"
+            >
+              <Col
+                xs={{ span: 23 }}
+                sm={{ span: 23 }}
+                md={{ span: 21 }}
+                lg={{ span: 20 }}
+                xl={{ span: 18 }}
+              >
+                <PageHeader
+                  title="Add Todo"
+                  subTitle="To add a todo, just fill the form below and click in add todo."
+                />
+              </Col>
+
+              <Col
+                xs={{ span: 23 }}
+                sm={{ span: 23 }}
+                md={{ span: 21 }}
+                lg={{ span: 20 }}
+                xl={{ span: 18 }}
+              >
+                <Card title="Create a new todo">
+                  <AddNewTaskForm />
+                </Card>
+              </Col>
+              <Col
+                xs={{ span: 23 }}
+                sm={{ span: 23 }}
+                md={{ span: 21 }}
+                lg={{ span: 20 }}
+                xl={{ span: 18 }}
+              >
+
+                <Card title="Details of task list">
+                  <Tabs defaultActiveKey="1" >
+                    <TabPane tab="Pending Task List" key="1">
+                      <PendingTask />
+                    </TabPane>
+                    <TabPane tab="Completed Task List" key="2">
+                      <CompletedTask />
+                    </TabPane>
+                  </Tabs>
+                </Card>
+
+              </Col>
+            </Row>
+    </Router>
   );
+
 }
 
 export default App;
