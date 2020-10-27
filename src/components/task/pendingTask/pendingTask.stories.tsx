@@ -10,7 +10,7 @@ import  PendingTask  from './pendingTask';
 import { reduxContext } from '../../../redux/context';
 import moment from 'moment'
 export default {
-  title: 'Pending Tasks',
+  title: 'Task/Pending Task',
   component: PendingTask,
 } as Meta;
 

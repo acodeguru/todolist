@@ -8,7 +8,7 @@ import CompletedTask from './completedTask';
 import { reduxContext } from '../../../redux/context';
 import moment from 'moment'
 export default {
-  title: 'Completed Tasks',
+  title: 'Task/Completed Tasks',
   component: CompletedTask,
 } as Meta;
 

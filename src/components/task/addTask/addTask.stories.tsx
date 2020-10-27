@@ -7,7 +7,7 @@ import '../../../styles/main.scss'
 import { reduxContext } from '../../../redux/context';
 import  AddNewTask  from './addTask';
 export default {
-  title: 'Add New Task',
+  title: 'Task/Add Task',
   component: AddNewTask,
 } as Meta;
 

@@ -1,6 +1,5 @@
 import React from 'react'
-import { Layout } from 'antd';
-import { Route, BrowserRouter as Router, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { Row, Col, Card, PageHeader, Tabs } from 'antd';
 import 'antd/dist/antd.css';
 
@@ -10,13 +9,10 @@ import AddNewTaskForm from '../src/components/task/addTask/addTask'
 import PendingTask from '../src/components/task/pendingTask/pendingTask'
 import CompletedTask from '../src/components/task/completedTask/completedTask'
 
-const { Content } = Layout;
 const { TabPane } = Tabs;
 
 
 function App() {
-  let [collapsed, setCollapse] = React.useState(false)
-
 
   return (
     <Router>
