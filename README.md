@@ -4,7 +4,9 @@ Run Backend :
 Run Front end : 
 
 "start": "react-scripts start",
+
 "build": "npm run test && react-scripts build",
+
 "test": "jest",
 "eject": "react-scripts eject",
 "storybook": "start-storybook -p 6006 -s public",
