@@ -28,10 +28,9 @@ export default function AddNewTaskForm() {
             }}
             onFinish={onFinish}
         >
-            <Row>
+            <Row gutter={[16, 16]}>
                 <Col xs={24} sm={24} md={24} lg={24} xl={8}>
                     <Form.Item
-                        label="Task"
                         name="task"
                         rules={[
                             {
@@ -40,12 +39,11 @@ export default function AddNewTaskForm() {
                             },
                         ]}
                     >
-                        <Input />
+                        <Input placeholder="Enter a task" />
                     </Form.Item>
                 </Col>
                 <Col xs={24} sm={24} md={12} lg={12} xl={5}>
                     <Form.Item
-                        label="Date"
                         name="dateTime"
                         rules={[
                             {
@@ -59,7 +57,6 @@ export default function AddNewTaskForm() {
                 </Col>
                 <Col xs={24} sm={24} md={12} lg={12} xl={5}>
                     <Form.Item
-                        label="Time"
                         name="dateTime"
                         rules={[
                             {
